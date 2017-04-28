@@ -1,0 +1,8 @@
+{
+  "name": "txbb-scratch",
+  "version": "0.2.2",
+  "main": "txbb-scratch.js",
+  "repository": "git@github.com:NemoAlex/txbb-scratch.git",
+  "author": "Txbb",
+  "license": "MIT"
+}
