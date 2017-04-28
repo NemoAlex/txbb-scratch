@@ -255,6 +255,10 @@
             this.onStartCalled = false;
         },
 
+        setInner: function (text) {
+            this.elem.lastChild.innerHTML = text
+        },
+
         _percent: function() {
             var hits = 0,
                 imageData = this.ctx.getImageData(0,0, this.width, this.height);

@@ -9,54 +9,18 @@
 </head>
 <body>
     <!-- <canvas width="300" height="200" style="background-color:#ccc">您的设备不支持刮刮卡</canvas> -->
-    <div id="J-Scratch" style="width:300px;height:200px;"></div>
-    <br><br><br>
-    <div id="J-Scratch2" style="width:300px;height:200px;"></div>
+    <div id="J-Scratch" style="width:300px;height:100px;"></div>
     <script>
     var instance = Txbb.Scratch.attach(document.getElementById('J-Scratch'), {
         bg: '#fc0',
         fg: '#777',
-        middle: '哈哈哈，11111',
-        onStart: function(){alert('开始刮1')},
-        onEnd: function(){alert('刮完了1');}
-    });
-
-    var instance2 = Txbb.Scratch.attach(document.getElementById('J-Scratch'), {
-        bg: '#ccc',
-        fg: '#bbb',
-        middle: '<img src="test.jpg"/>',
-        onEnd: function(){alert('刮完了2');}
-    });
-
-    var instance3 = Txbb.Scratch.attach(document.getElementById('J-Scratch2'), {
-        middle: '呵呵，3333',
-        onStart: function(){alert('开始刮3')},
+        middle: '继续刮',
+        onStart: function(){
+            instance.setInner('内容变了，哈哈哈')
+        },
         onEnd: function(){
-            alert('刮完了3');
-            instance3.reset({onEnd: function() {alert('又刮完了3')}})
         }
     });
-
-    // 第一个编号是1
-    console.debug(instance.id === 1);
-    // 第二个编号还是1，而且，第二个等于第一个实例
-    console.debug(instance2.id === 1);
-    console.debug(instance === instance2);
-
-    // 容器的背景会为 #ccc, 前景会为 #bbb, 中间的展示数据为一个图片
-    console.debug(instance.options.bg === '#fc0');
-
-
-    console.debug(instance3.id === 2);
-    console.debug(instance3.options.bg === '#f00');
-
-    // instance._clear();
-    //
-    // setTimeout(function(){
-    //     instance2.reset();
-    // }, 3000)
-    // console.debug(instance.elem._addEvent('mousedown  touchstart'))
-
     </script>
 </body>
 </html>
