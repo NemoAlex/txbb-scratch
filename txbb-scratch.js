@@ -250,6 +250,12 @@
             this.ctx.rect(0, 0, this.width, this.height);
             this.ctx.fill();
             this.ctx.closePath();
+            var img = this.options.img
+            if (img) this.ctx.drawImage(img,
+                this.canvas.width / 2 - img.width / 2,
+                this.canvas.height / 2 - img.height / 2,
+                img.width,
+                img.height)
 
             this._createMiddle();
             this.onStartCalled = false;
@@ -283,8 +289,9 @@
     var defaults = {
         bg: '#f00',
         fg: '#888',
-        middle: '谢谢惠顾，嘿嘿',
+        middle: '谢谢惠顾',
         size: 20,
+        img: '',
         onEnd: function(){},
         onStart: function(){}
     };
