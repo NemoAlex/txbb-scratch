@@ -233,7 +233,7 @@
             })._addEvent('touchend', function(e) {
                 _this.ctx.closePath();
                 var percent = _this._percent();
-                if (percent >= 50) _this._clear();
+                if (percent >= _this.options.percent) _this._clear();
             });
         },
 
@@ -292,6 +292,7 @@
         middle: '谢谢惠顾',
         size: 20,
         img: '',
+        percent: 30,
         onEnd: function(){},
         onStart: function(){}
     };

@@ -4,5 +4,6 @@
   "main": "txbb-scratch.js",
   "repository": "git@github.com:NemoAlex/txbb-scratch.git",
   "author": "Txbb",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {}
 }
