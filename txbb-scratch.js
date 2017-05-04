@@ -195,6 +195,9 @@
         _eventBind: function() {
             var _this = this;
             _this.canvas._addEvent('touchstart', function(e) {
+                // 重新计算 offset
+                _this.offset = _this.canvas._offset();
+
                 var x = Math.floor((e.touches[0].pageX + document.body.scrollLeft) - _this.offset.left);
                 var y = Math.floor((e.touches[0].pageY + document.body.scrollTop) - _this.offset.top);
 
